@@ -465,7 +465,10 @@ fieldset[disabled] .btn-primary.active {
     background: #222;
 }
 
-.modal-dialog {width:600px;}
+.modal-dialog {
+    width:600px;
+    height: auto;
+}
 .thumbnail {
     margin:auto;
     margin-bottom:6px;
@@ -479,6 +482,18 @@ fieldset[disabled] .btn-primary.active {
 .modal-title {
     font-family: Tahoma, sans-serif;
 }
+
+.modal-header{
+    background-color: #800080;
+}
+
+.modal-footer{
+    background-color: #800080;
+}
+
+.thumbnail{
+
+}
 img::selection {
     color: #fff;
     background: 0 0;
@@ -490,7 +505,7 @@ img::-moz-selection {
 }
 
 .gallery {
-    height:430px;
+    height:360px;
 }
 
 body {
