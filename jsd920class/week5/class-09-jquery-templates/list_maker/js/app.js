@@ -27,23 +27,23 @@
 //       }//else
 //     })//click event
 // })//ready event
+//.....
 
+  
 
-$(document).ready(function () {
-  $("#clickme").click(function(){
-    
-    var newList = $('#new-item');
-    var source = $('#list-template').html();
-    var template = Handlebars.compile(source);
+$(document).ready(function() {
+    var list = $('#list')
+    var newList = $('#new-item')
     var listObject = {
-       list: newList
+           list: newList.val()
     };
-
-    var listTemplate = template(listObject);
-
-    $('#list').append(listTemplate);
-
-  });
+      $("#clickme").click(function(event){
+        event.preventDefault();
+        var source = $('#list-template').html();
+        var template = Handlebars.compile(source);
+        var listTemplate = template(listObject);
+        $('#list').append(listTemplate);
+      });
 });
 
 
