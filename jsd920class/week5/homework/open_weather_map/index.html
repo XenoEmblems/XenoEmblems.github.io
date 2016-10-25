@@ -1,22 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-  	<title></title>
-	<link rel="stylesheet" href="style.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+		<script id="weather-template" type="text/x-handlebars-template">
+			<hr>
+			<h2>Current Weather in {{namebars}}</h2>
+			<div id="nyc-weather">
+				
+				<h3>Temperature: {{tempbars}}°F</h3>
+				<h3>Humidity: {{humiditybars}}%</h3>
+				<h3>Wind speed: {{speedbars}} mph</h3>
+			</div>
+		</script>
+	</head>
 <body>
 
 	<h1>Open Weather Maps API</h1>
+
+	<br>
+	<div id="results"></div>
+	<hr>
+	<form method="get">
+		<h3>Input city and state here:</h3>
+		City: <input id="city_input"/>
+		<br>
+		<br>
+		State: <input id="state_input"/>
+		<br>
+		<br>
+		<input id="submit" type="submit" value="Submit"/>
+	</form>
+	
+	
+	
+	
+
+
 	<hr>
 
-	<div>
-		<h2>Current Weather in NYC</h2>
-		<div id="nyc-weather"></div>
-	</div>
-	<hr>
+	
+	
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  	<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
+  	<script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
 
 </body>
 </html>
