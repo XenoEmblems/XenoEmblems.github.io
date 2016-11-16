@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" ng-app="root">
+<!-- Angular is like a giant drawer -->
+<!-- The main HTML is the foundation of the drawer -->
+<!-- The HTML accesses an individual drawer which is the template.html -->
+<!-- What is inside the drawer is defined by the components. The contents is the .json or the array of data.-->
+<!-- When an new view is clicked it generates a cabinet with new data defined by a new component -->
 <head>
 
     <meta charset="utf-8">
@@ -11,19 +15,107 @@
 
     <title>Eric Doyle</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/cagematch.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/portfolio.css" rel="stylesheet">
 
 </head>
 
-<body id="page-top" class="index">
+
+
+<body id="page-top">
+<!-- Navbar of views -->
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Eric Doyle</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <!-- When clicked a new div will be loaded instead of scrolling. -->
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- Use Glyphicons from Font Awesome here -->
+            <li><a href="../navbar/">LinkedIn</a></li>
+            <li><a href="../navbar-static-top/">Github</a></li>
+            <li><a href="../navbar-static-top/">Stack Overflow</a></li>
+            
+          </ul>
+        </div>
+
+        <!--/.nav-collapse -->
+      </div>
+ </nav>
+
+<!-- Home/About Me View -->
+<!-- Profile Picture - Elevator Pitch to sell myself -->
+<!-- Be friendly and personal. -->
+<!-- No longer than 300 words -->
+<!-- <aboutme></aboutme> -->
+
+<!-- Resume View -->
+<!-- Display a list of major ventures I worked in on left.
+New Web Design, Rescuing Leftover Cuisine, Seedless Lawyers
+
+Skills showcased on the right.
+
+Resume.pdf so people can print it out.
+-->
+
+<!--  Portfolio View
+
+Display a list of projects and what I've learned for each project I have done.
+Ask Claudia on how I should present this. Showcase Website and GettingCaged project.
+
+Start with 3x2 display to share with Getting Caged
+
+Modal with picture and link on the left.
+
+Github Info, Functionality, Tech Stack on right
+
+ -->
+ <!-- Contact View 
+
+Hire me
+Phone Number,
+Skype,
+LinkedIn link,
+Email link
+
+
+ -->
+
+
 <h1>Under Construction</h1>
 
 
+
 </body>
+<!-- Make sure EVERY SINGLE JS file is connected or Angular will not work. -->
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
+
+<!-- Angular JavaScript  -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<!-- Angular Module -->
+<!-- <script src="app/app.module.js"></script>
+<! Project List Module -->
+<!-- <script src="app/project-list/project-list.module.js"></script> -->
+<!-- Project List Component -->
+<!-- <script src="app/project-list/project-list.component.js"></script> -->
+
 
 </html>
