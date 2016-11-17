@@ -1,0 +1,32 @@
+body {
+	background-color: #4682B4;
+	color: #ffffff;
+	text-align: center;
+}
+
+#container {
+	
+}
+
+.cagephoto {
+	margin: auto;
+	/*Photo should disappear when the search button is clicked.*/
+}
+
+#search-input {
+	width: 500px;
+	margin: auto;
+}
+
+.btn {
+	background-color: #6AA0CC;
+	border-radius: 8px;
+
+}
+
+.btn:hover {
+	
+	background-color: #2B6BA0;
+}
+
+.btn

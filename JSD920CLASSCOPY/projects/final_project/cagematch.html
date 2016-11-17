@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cage Match</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/gettingCaged.css" rel="stylesheet">
+    <script id="result-template" type="text/x-handlebars-template">
+    	<!-- Result Box -->
+    	<div class="col-lg-3 col-md-3 col-sm-2">
+    		<a href="#{{title}}" class="movie-link" data-toggle="modal">
+				<h4>{{title}}</h4>
+				<!-- Find the complete img url for the pictures. -->
+				<img src="{{image}}" class="img-responsive img-rounded cagephoto">
+					
+				</img>
+				<div class="genres">
+					<ul class="genre-list">
+					  <!-- For loop to show each Genre in the Array. -->
+					  <li class="{{genre}}">{{genre}}</li>
+					</ul>
+				</div>
+
+			
+				<div class="release-date">
+					<p>Released On: {{release_date}}</p>
+				</div>
+				<div class="votes">
+					{{votes}}
+				</div>
+				<!--Future Feature: When a Genre is clicked. Use javascript filter to only find movies with that Genre. -->
+				<!-- Future Feature:Only show first three in result divs-->
+			</a>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="{{title}}" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<!-- Close Modal Button -->
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+					<div class="rl"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="modal-body">
+							<h2>{{title}}</h2>
+							<!-- Special Line for under the title -->
+							<hr class="cage-line">
+							<img src="{{image}}"></img>
+							<h3>Summary</h3>
+							<p>{{overview}}</p>
+							<h4>Released on: {{release_date}}</h4>
+							<h4>Genres</h4>
+							<ul class="genre-list">
+							  <li class="{{genre}}">{{genre}}</li>
+							</ul>
+							<div class="row">
+								<!-- Button to find legal streaming. Find Legal streaming search website.-->
+								<a class="btn btn-default" href="{{title}}">Find Stream</a>
+								<!-- If Netflix Fa exists or Tv exists put it here -->
+								<!-- Find movie on Amazon when clicked. Put Amazon or Dollar Glyph here if it exists-->
+								<a class="btn btn default" href="{{title}}">Buy Online</a>
+								<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ 
+	</script>
+
+</head>
+
+
+<body id="page-top" class="index">
+	<div class="container">
+		<h1>Search for your next Nicolas Cage Movie!</h1>
+		<br>
+		<!-- When Search Function is clicked the Photo disappears -->
+		<!-- <img class="cagephoto img-responsive img-rounded text-center" src="http://www.placecage.com/c/300/300"></img> -->
+		<br>
+		<form>
+		  <div class="form-group">
+		    <label for="Search">Angular.js App dedicated to my favorite actor.</label>
+		    <input type="search" class="form-control" id="search-input" placeholder="Search">
+		  </div>
+		   <!-- <label class="radio-inline"><input type="radio" name="optradio">Search by Title</label>
+		   <label class="radio-inline"><input type="radio" name="optradio">Search by Genre</label>
+		   <label class="radio-inline"><input type="radio" name="optradio">Search by Description</label> -->
+		   <br>
+		   <br> 
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		<!-- When Form is made filter through the array in the results array.-->
+		<!-- ANGULAR WOULD BE PERFECT FOR THIS. -->
+	</div>
+	<div class="row">
+	<!-- Append divs here. Build divs based on first 9 movies when the page is loaded. -->
+		
+	</div>
+
+
+<!-- Use Angular Component to present a list of Nicolas Cage movies  -->
+<!-- Store list of all movies so they can all be searched. -->
+<!-- Build a skeleton for one movie. -->
+<!-- Present the movies in a 3x2 box -->
+<!-- Use Search function from Angular Tutorial to display specific movies-->
+</body>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Core JavaScript -->
+<script src="js/gettingCaged.js"></script>
+
+</html>
