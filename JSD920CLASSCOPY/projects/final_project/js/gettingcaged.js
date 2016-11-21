@@ -107,6 +107,8 @@ $(document).ready(function () {
   function createMovieObject(row, genre_array){
      
      var movieObject = {
+        // id
+        r_id: row["id"],
         //Movie Title
         title: row["title"],
         // Genres
@@ -165,18 +167,36 @@ function getMovies(page) {
         if (cagedMovies.length === results){
           console.log(cagedMovies.length);
           console.log(cagedMovies[91]);
-          generateFrontEnd(cagedMovies);
+          hbTemplate(cagedMovies);
         } else {
         console.log(cagedMovies.length);
       }
     }); 
 };
 
-function generateFrontEnd(cagedMovies){
-  console.log(cagedMovies[0]);
-  alert("YES");
-}
 
+
+function hbTemplate(objects){
+  var resultTemplate = $('#result-template').html();
+  var compileResults = Handlebars.compile(resultTemplate);
+  var addResultObj = compileResults(objects);
+  // Objects is an array of objects. I need for it to be compiled one at a time.
+  console.log(objects);
+  var hbTitleHtml = $('#result-table').append(addResultObj);
+  console.log("Complete");
+
+  };
+
+  //Use Each function showed in Feedr.
+  //An object that holds an array.
+
+
+// Once I get it to load then work on grid wrap columns in row
+// <!-- http://stackoverflow.com/questions/26831128/handlebars-js-and-bootstrap-grid-wrap-columns-in-row -->
+//       <!-- https://funkjedi.com/technology/412-every-nth-item-in-handlebars/ -->
+
+
+  // Initiate functions with pageLoop()
   $.when(pageLoop()).done(function(){
     alert("Done");
     console.log(cagedMovies);

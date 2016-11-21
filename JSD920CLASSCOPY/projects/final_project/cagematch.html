@@ -3,6 +3,8 @@
 
 <head>
 
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,12 +15,16 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/gettingCaged.css" rel="stylesheet">
     <script id="result-template" type="text/x-handlebars-template">
+        
+
     	<!-- Result Box -->
-    	<div class="col-lg-3 col-md-3 col-sm-2">
-    		<a href="#{{title}}" class="movie-link" data-toggle="modal">
+    	{{#each this}}
+    	<div class="col-lg-3 col-md-3 col-sm-6">
+    		<a href="#{{r_id}}" class="movie-link" data-toggle="modal">
 				<h4>{{title}}</h4>
 				<!-- Find the complete img url for the pictures. -->
-				<img src="{{image}}" class="img-responsive img-rounded cagephoto">
+				<img src="
+https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cagephoto">
 					
 				</img>
 				<div class="genres">
@@ -30,51 +36,53 @@
 
 			
 				<div class="release-date">
-					<p>Released On: {{release_date}}</p>
+					<p>Released On: {{release}}</p>
 				</div>
 				<div class="votes">
-					{{votes}}
+					<p>Votes: {{votes}}</p>
 				</div>
 				<!--Future Feature: When a Genre is clicked. Use javascript filter to only find movies with that Genre. -->
 				<!-- Future Feature:Only show first three in result divs-->
 			</a>
 		</div>
-		<!-- Modal -->
-		<div class="modal fade" id="{{title}}" tabindex="-1" role="dialog" aria-hidden="true">
+	 <!-- Modal  -->
+		 <div class="modal fade" id="{{r_id}}" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-content">
-				<!-- Close Modal Button -->
-				<div class="close-modal" data-dismiss="modal">
-					<div class="lr">
-					<div class="rl"></div>
-					</div>
-				</div>
-				<div class="container">
-					<div class="row">
-						<div class="modal-body">
+		 		<!-- Close Modal Button -->
+		 		<div class="close-modal" data-dismiss="modal">
+		 			<div class="lr">
+		 			<div class="rl"></div>
+		 			</div>
+		 		</div>
+		 		<div class="container">
+		 			<div class="row">
+		 				<div class="modal-body">
 							<h2>{{title}}</h2>
 							<!-- Special Line for under the title -->
-							<hr class="cage-line">
-							<img src="{{image}}"></img>
-							<h3>Summary</h3>
-							<p>{{overview}}</p>
-							<h4>Released on: {{release_date}}</h4>
-							<h4>Genres</h4>
-							<ul class="genre-list">
-							  <li class="{{genre}}">{{genre}}</li>
-							</ul>
-							<div class="row">
-								<!-- Button to find legal streaming. Find Legal streaming search website.-->
-								<a class="btn btn-default" href="{{title}}">Find Stream</a>
+		 					<hr class="cage-line">
+ 							<img src="{{image}}"></img>
+		 					<h3>Summary</h3>
+		 					<p>{{overview}}</p>
+		 					<h4>Released on: {{release}}</h4>
+		 					<h4>Genres</h4>
+		 					<ul class="genre-list">
+		 					  <li class="{{genre}}">{{genre}}</li>
+		 					</ul>
+		 					<div class="row">
+		 						<!-- Button to find legal streaming. Find Legal streaming search website.-->
+		 						<a class="btn btn-default" href="{{title}}">Find Stream</a>
 								<!-- If Netflix Fa exists or Tv exists put it here -->
-								<!-- Find movie on Amazon when clicked. Put Amazon or Dollar Glyph here if it exists-->
-								<a class="btn btn default" href="{{title}}">Buy Online</a>
-								<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		 						<!-- Find movie on Amazon when clicked. Put Amazon or Dollar Glyph here if it exists-->
+		 						<a class="btn btn default" href="{{title}}">Buy Online</a>
+		 						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+		 					</div>
+		 				</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+		{{/each}}
+	
  
 	</script>
 
@@ -103,7 +111,7 @@
 		<!-- When Form is made filter through the array in the results array.-->
 		<!-- ANGULAR WOULD BE PERFECT FOR THIS. -->
 	</div>
-	<div class="row">
+	<div id="result-table" class="row">
 	<!-- Append divs here. Build divs based on first 9 movies when the page is loaded. -->
 		
 	</div>
@@ -120,7 +128,12 @@
 
 <!-- Bootstrap -->
 <script src="js/bootstrap.min.js"></script>
+<!-- Handlebars -->
+<script src="js/handlebars-v4.0.5.js"></script>
 <!-- Core JavaScript -->
 <script src="js/gettingCaged.js"></script>
 
 </html>
+<script>
+
+	</script>
