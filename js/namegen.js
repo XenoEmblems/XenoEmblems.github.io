@@ -6,6 +6,8 @@ $("#jumble").click(function(){
 	var f = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "w", "x", "v", "z"];
 	var y = ["y", "ie", "i",];
 	var letter = "";
+
+	//Helper Function to append a random index from an array.
 	function randomLetter(array) {
 		
 		console.log(array[Math.floor(Math.random() * array.length)]);
