@@ -8,12 +8,18 @@ Description: Nicolas Cage Movie rate and search site. Users can search and find 
 
 #Functional component 1
 Having the API data from themoviedb compiled with Handlebars and functional with Angular.js
+Completed in 4 hours.
 
 #Functional component 2
 Search Function (Search function can search from the array of API matches.)
+Still in Progress. Finished when Handlebars is retranslated to Angular.
+
 
 #Functional Component 3
 Restricting how many divs can be loaded at a time and have "pages" when clicked to load the next set of divs.
+
+#Functional Component 4.
+Each Movie has its own Modal with links to see if the movie is streaming and can be bought.
 
 
 Use this section to document all helper functions. These functions should be versatile enough to be reused in other projects
@@ -22,6 +28,7 @@ Use this section to document all helper functions. These functions should be ver
 
 Bootstrap for Responsive Design
 Handlebars to compile data easily.
+Angular to use binding to search through the Array of Objects.
 
 #JSON Data Keys
 
@@ -41,6 +48,7 @@ Change Log
 11/15/16: API Data from The Movie Database is put into Array of Object
 Issues and Resolutions:
 
+11/22/16: MVP completed. When the web page loads it appends all the Nicolas Cage movies on to the page.
 
 #Step by Step process:
 

@@ -19,19 +19,26 @@
 
     	<!-- Result Box -->
     	{{#each this}}
-    	<div class="col-lg-3 col-md-3 col-sm-6">
-    		<a href="#{{r_id}}" class="movie-link" data-toggle="modal">
+    	<div class="result-box col-lg-3 col-md-4 col-sm-6">
+    		
 				<h4>{{title}}</h4>
 				<!-- Find the complete img url for the pictures. -->
-				<img src="
-https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cagephoto">
+				<!-- If no image exists then replace it with a  -->
+				<a href="#{{r_id}}" class="movie-link" data-toggle="modal">
+					{{#if image}}
+					  <img src="https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cagephoto">
+					{{else}}
+					    <img src="https://www.placecage.com/500/700" class="img-responsive img-rounded cagephoto">
+					{{/if}}
+				</a>
 					
 				</img>
 				<div class="genres">
-					<ul class="genre-list">
+					<p class="align">Genres: </p>
 					  <!-- For loop to show each Genre in the Array. -->
-					  <li class="{{genre}}">{{genre}}</li>
-					</ul>
+					  {{#each genre}}
+		 				<div class="genre">{{this}}</div>
+		 			  {{/each}}
 				</div>
 
 			
@@ -43,44 +50,48 @@ https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cage
 				</div>
 				<!--Future Feature: When a Genre is clicked. Use javascript filter to only find movies with that Genre. -->
 				<!-- Future Feature:Only show first three in result divs-->
-			</a>
+			
 		</div>
 	 <!-- Modal  -->
 		 <div class="modal fade" id="{{r_id}}" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-content">
-		 		<!-- Close Modal Button -->
-		 		<div class="close-modal" data-dismiss="modal">
-		 			<div class="lr">
-		 			<div class="rl"></div>
-		 			</div>
-		 		</div>
-		 		<div class="container">
-		 			<div class="row">
-		 				<div class="modal-body">
-							<h2>{{title}}</h2>
-							<!-- Special Line for under the title -->
-		 					<hr class="cage-line">
- 							<img src="{{image}}"></img>
-		 					<h3>Summary</h3>
-		 					<p>{{overview}}</p>
-		 					<h4>Released on: {{release}}</h4>
-		 					<h4>Genres</h4>
-		 					<ul class="genre-list">
-		 					  <li class="{{genre}}">{{genre}}</li>
-		 					</ul>
-		 					<div class="row">
-		 						<!-- Button to find legal streaming. Find Legal streaming search website.-->
-		 						<a class="btn btn-default" href="{{title}}">Find Stream</a>
-								<!-- If Netflix Fa exists or Tv exists put it here -->
-		 						<!-- Find movie on Amazon when clicked. Put Amazon or Dollar Glyph here if it exists-->
-		 						<a class="btn btn default" href="{{title}}">Buy Online</a>
-		 						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
-		 					</div>
-		 				</div>
-		 			</div>
-		 		</div>
-		 	</div>
-		 </div>
+				<div class="modal-content">
+			 		
+			 		<div class="container">
+
+			 			<div class="row">
+			 				<div class="modal-body">
+								<!-- Close Modal Button -->
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        				<h2>{{title}}</h2>
+								<!-- Special Line for under the title -->
+			 					<hr class="cage-line">
+	 							{{#if image}}
+								  <img src="https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cagephoto">
+								{{else}}
+								    <img src="https://www.placecage.com/500/700" class="img-responsive img-rounded cagephoto">
+								{{/if}}
+			 					<h3>Summary</h3>
+			 					<p>{{overview}}</p>
+			 					<h4>Released on: {{release}}</h4>
+			 					<h4>Genres</h4>
+			 					<div class="genre-list">
+			 					  {{#each genre}}
+			 					  	<div class="genre">{{this}}</div>
+			 					  {{/each}}
+			 					</div>
+			 					<div class="row">
+			 						<!-- Button to find legal streaming. Find Legal streaming search website.-->
+			 						<a target="_blank" class="btn btn-default link" href="http://www.canistream.it/search/movie/{{title}}">Find Stream</a>
+									<!-- If Netflix Fa exists or Tv exists put it here -->
+			 						<!-- Find movie on Amazon when clicked. Put Amazon or Dollar Glyph here if it exists-->
+			 						<a target="_blank" class="btn btn-default link" href="https://www.google.com/search?tbm=shop&q={{title}}">Buy Online</a>
+			 						<button type="button" class="btn btn-default link" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+			 					</div>
+			 				</div>
+			 			</div>
+			 		</div>
+			 	</div>
+			 </div>
 		{{/each}}
 	
  
@@ -104,13 +115,13 @@ https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cage
 		   <!-- <label class="radio-inline"><input type="radio" name="optradio">Search by Title</label>
 		   <label class="radio-inline"><input type="radio" name="optradio">Search by Genre</label>
 		   <label class="radio-inline"><input type="radio" name="optradio">Search by Description</label> -->
-		   <br>
 		   <br> 
-		  <button type="submit" class="btn btn-default">Submit</button>
+		  <button id="search" type="submit" class="btn btn-default">Submit</button>
 		</form>
 		<!-- When Form is made filter through the array in the results array.-->
 		<!-- ANGULAR WOULD BE PERFECT FOR THIS. -->
 	</div>
+	<br>
 	<div id="result-table" class="row">
 	<!-- Append divs here. Build divs based on first 9 movies when the page is loaded. -->
 		
@@ -134,6 +145,3 @@ https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cage
 <script src="js/gettingCaged.js"></script>
 
 </html>
-<script>
-
-	</script>

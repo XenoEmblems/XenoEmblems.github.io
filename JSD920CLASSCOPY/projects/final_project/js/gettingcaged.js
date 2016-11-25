@@ -6,6 +6,7 @@
 $(document).ready(function () {
 	var apiKey = "d440a7f7ce806a7de7507e34281331c7";
 	var nicolasCage = 2963;
+  var actorId = 0;
   var sort = "sort_by=popularity.desc";
 	var page = 1;
 	var movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=" + apiKey + "&language=en-US&" + sort + "&include_adult=false&include_video=true&with_people=" + nicolasCage;
@@ -88,7 +89,30 @@ $(document).ready(function () {
             "name": "Western"
       }];
 	//For loop for each page number
-   
+  
+  // New Feature! When a new Actor is selected you can search movies based off a new actor.
+
+  // $("#actor").click(function(event){ 
+  //   event.preventDefault();
+  //   var actor = $("#actor-input").val().replace(/ /g,"%20");
+  //   var actorUrl = "http://api.tmdb.org/3/search/person?api_key=" + apiKey + "&query=" + actor;
+  //   console.log(actorUrl);
+  //   return $.get(actorUrl, function(actorresponse) {
+  //     // How long should the array be?
+  //     console.log(actorresponse['results']['0']['id']);
+
+  //     var actorId = actorresponse['results']['0']['id'];
+  //     console.log(actorId);
+  //     if (actorId == null){
+  //       alert("Sorry this input is invalid");
+  //     } else {
+  //       var movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=" + apiKey + "&language=en-US&" + sort + "&include_adult=false&include_video=true&with_people=" + actorId;
+  //       console.log(movieUrl);
+  //       pageLoop(movieUrl);
+  //     }
+  //   });
+  // });
+
 	console.log(movieUrl);
 	// Use Get function to find the src url
   // Multiple for loops. For loop for each page using a for loop to iterate the pages.
@@ -105,6 +129,8 @@ $(document).ready(function () {
   }
   // Constructor function
   function createMovieObject(row, genre_array){
+
+
      
      var movieObject = {
         // id
@@ -119,7 +145,7 @@ $(document).ready(function () {
         // Votes can be sorted.
         votes: row["vote_average"],
         // Can be sorted by Release Date too.
-        release: row["release_date"]
+        release: row["release_date"],
      };
 
    return movieObject;
@@ -129,21 +155,26 @@ $(document).ready(function () {
   
 
 
-
+  pageLoop(movieUrl);
     //For loop for pages
 
-function pageLoop(){ 
-    return $.get(movieUrl, function(pageresponse) {
-        for(var h = 1; h <= pageresponse['total_pages']; h++){
-            console.log(h);
-            getMovies(h);
-        }
-    }); 
-}
+  function pageLoop(apiresponse){
+      var cagedMovies = [];
+      $("#result-table").html("");
+      return $.get(apiresponse, function(pageresponse) {
+          for(var h = 1; h <= pageresponse['total_pages']; h++){
+              console.log(h);
+              console.log(apiresponse);
+              getMovies(apiresponse ,h);
+          }
+      }); 
+  }
 
-function getMovies(page) {
+function getMovies(sourceurl, page) {
     var p = page;
-    var movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=" + apiKey + "&language=en-US&" + sort + "&include_adult=false&include_video=true&with_people=" + nicolasCage + "&page=" + page;
+    console.log(sourceurl + "&page=" + page);
+    var movieUrl = sourceurl + "&page=" + page;
+    console.log(movieUrl);
     return $.get(movieUrl, function(response) {
       // How long should the array be?
       var results = response['total_results'];
@@ -156,7 +187,11 @@ function getMovies(page) {
           for (var i = 0; i < genre_response.length; i++) {
             // Find the Genre by Genre ID
             var genre_obj = getGenreById(genre_response[i]);
-            genre_array.push(genre_obj[0].name);
+            if (genre_obj == null) {
+              genre_obj = "";
+            } else {
+              genre_array.push(genre_obj[0].name);
+            }
           };
         // function - makeObject
         var movieObject = createMovieObject(response['results'][m], genre_array);
@@ -184,11 +219,10 @@ function hbTemplate(objects){
   console.log(objects);
   var hbTitleHtml = $('#result-table').append(addResultObj);
   console.log("Complete");
-
   };
 
-  //Use Each function showed in Feedr.
-  //An object that holds an array.
+
+// default picture is placecage
 
 
 // Once I get it to load then work on grid wrap columns in row
@@ -203,8 +237,8 @@ function hbTemplate(objects){
     console.log(cagedMovies.length);
   });
 
-
 });
+
 
 
 
