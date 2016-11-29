@@ -206,7 +206,6 @@ function hbTemplate(objects){
 
   // Initiate functions with pageLoop()
   $.when(pageLoop()).done(function(){
-    alert("Done");
     console.log(cagedMovies);
     console.log(cagedMovies.length);
   });
