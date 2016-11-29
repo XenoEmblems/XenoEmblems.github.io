@@ -1,0 +1,150 @@
+
+body {
+	background-color: #3B5998;
+}
+
+/*Responsiveness*/
+
+.parent {
+	margin-top: 100px;
+	width: 100%;
+}
+
+
+
+.desktop {
+	display: none;
+}
+
+.desktop .section {
+	height: 500px;
+}
+
+.page {
+	display: block;
+}
+
+.social {
+	display: none;
+}
+
+/*Show mobile version when page is small enough*/
+
+@media (min-width: 750px) {
+
+	.desktop {
+		display: inline-block;
+	}
+
+	.mobile {
+		display: none!important;
+	}
+
+	.page {
+		display: none;
+	}
+
+	.social {
+		display: inline;
+	}
+}
+
+
+/*Center what's inside*/
+
+.container {
+	text-align: center;
+}
+
+/*Different color divs for each section*/
+
+.green {
+	border: 50px solid;
+	border-radius: 25px;
+	background-color: #00C957;
+	border-color: green;
+}
+
+.blue {
+	border: 50px solid;
+	border-radius: 25px;
+	background-color: #6495ED;
+	border-color: #3162ba;
+}
+
+.text {
+	padding: 5px;
+	background-color: #FFFFF0;
+	border-radius: 5px;
+}
+
+.text h2 {
+	margin: 30px;
+}
+
+/*Home*/
+
+.header {
+	font-size:50px;
+	font-weight:700;
+	font-family: 'Lora', serif;
+}
+
+.profilepic {
+	border: 10px solid;
+	border-radius: 5px;
+	border-color: green;
+
+}
+
+/*About Me*/
+.aboutme {
+	padding: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	background-color: #FFFFF0;
+	border-radius: 5px;
+}
+
+.aboutme p {
+	font-size:20px
+}
+
+/*Resume*/
+
+#resume {
+	height: 100%;
+}
+#frPDF {
+    padding: 3%;
+    height: 500px;
+}
+
+/*Projects*/
+
+.portfolio {
+	padding: 3%;
+}
+
+/*Contact Me*/
+
+.no-dots{
+	display:inline-block; 
+	list-style-type: none; 
+	padding-left:0;
+}
+
+.no-dots a{
+	color: #000000;
+}
+
+.no-dots a:hover {
+	color: #18bc9c;
+}
+.contact-link {
+	float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
