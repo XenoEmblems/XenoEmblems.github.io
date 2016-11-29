@@ -66,14 +66,21 @@
 					{{else}}
 					   <img src="https://www.placecage.com/500/700" class="img-responsive img-rounded cagephoto">
 					{{/if}}
-					<h3>Summary</h3>
-					<p>{{overview}}</p>
-					<h4>Released on: {{release}}</h4>
-					<h4>Genres</h4>
-					<div class="genre-list">
-					 {{#each genre}}
-					 	<div class="genre">{{this}}</div>
-					 {{/each}}
+					<br>
+					<div class="text">
+					<br>
+						<div class="box">
+							<h3>Summary</h3>
+							<p>{{overview}}</p>
+							<h4>Released on: {{release}}</h4>
+							<h4>Genres</h4>
+							<div class="genre-list">
+							 {{#each genre}}
+							 	<div class="genre">{{this}}</div>
+							 {{/each}}
+							</div>
+						</div>
+					<br>
 					</div>
 					<br>
 					<div class="row">

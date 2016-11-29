@@ -45,10 +45,11 @@ margin: auto;
 }
 
 .genre {
-background-color: #3232ff;
-display: inline-block;
-margin: auto;
-border-radius: 4px;
+	background-color: #6AA0CC;
+	display: inline-block;
+	margin: auto;
+	border-radius: 4px;
+	padding: 10px;
 }
 
 /*Modal content*/
@@ -59,7 +60,7 @@ max-width: 900px;
 
 .modal-content {
 max-width: 800px;
-background-color: cornflowerblue;
+background-color: #4682B4;
 color: #ffffff;
 margin:auto;
 }
@@ -75,6 +76,17 @@ margin: auto;
 .modal .close {
     color: #ffffff;
     opacity: .8;
+}
+
+.text {
+	background-color: cornflowerblue;
+	color: white;
+	border-radius: 10px;
+}
+
+.box {
+	width: 450px;
+	margin: auto;
 }
 
 /*.genre-list {
