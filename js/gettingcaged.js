@@ -212,12 +212,119 @@ function hbTemplate(objects){
   });
 
   $("#search-button").click(function(event){
-      event.preventDefault();
+      // event.preventDefault();
       console.log("Button was clicked");
-      var filter = $("#search-input").val();
-      // What now?
-      // How do I filter the cagedMovie array and reload it into the page.
+      // Get Value
+      event.preventDefault();
+      // Set filter and titles to lowercase so it can have case insensitivity.
+      var filter = $("#search-input").val().toLowerCase();
+      console.log(filter);
+      // Caged Movies still are an array.
+      console.log(cagedMovies);
+      // Set Radio Buttons to variables
+      var titleRadio = $("#titleSearch").prop("checked");
+      
+      var genreRadio = $("#genreSearch").prop("checked");
+      var descRadio = $("#descSearch").prop("checked");
+      console.log(titleRadio === true);
+      if(filter !== ""){
+        // Grep to filter cagedMovies to only show the matching titles
+        
+        // This is so any part of the title can return True.
+          var filteredMovies = jQuery.grep(cagedMovies, function(e) {
+            // For loop for arrays?
+              
+              // If Title is selected...
+              if(titleRadio === true){
+              // This is so any part of the title can return True.
+              // Seperate Title to an Array of Strings.
+              var title = e.title.toLowerCase().split(" ");
+              //For loop.
+                for (j = 0; j < title.length; j++){
+                  // If any the search input is close to this word in the title 
+                  // then return this div.
+                    if(title[j].indexOf(filter) == 0){
+                      return true;
+                      
+                    } else {
+                      // Else nothing happens
+                      console.log("nope");
+                    }
+                  }
+                // If Genre is selected
+              } else if (genreRadio === true)  {
+                // Set Genre to a variable
+                var genre = e.genre;
+                // For loop the array of genres in each movie to see if a genre matches.
+                for (k = 0; k < genre.length; k++) {
+                    if(genre[k].toLowerCase() == filter){
+                      // If a genre matches then return true.
+                      return true;
+                    } else {
+                      console.log("nope");
+                    }
+                }
+
+              } else if (descRadio === true) {
+                var desc = e.overview.toLowerCase().split(" ");
+                for (l = 0; l < desc.length; l++){
+
+                    if(desc[l].indexOf(filter) == 0){
+                      return true;
+                      
+                    } else {
+                      // Else nothing happens
+                      console.log("nope");
+                    }
+
+                }
+              }
+
+              else {
+                alert("ERROR");
+              }
+              // } else if (genreRadio === true){
+              //   console.log("SUCCESS");
+              // }
+              
+          });
+
+
+        // Empty the result table
+        $( "#result-table").empty();
+        console.log(filteredMovies);
+        // So we can template the new results
+        hbTemplate(filteredMovies);
+        
+        
+      } else {
+        alert("INVALID INPUT");
+      }
+      // } else if (genre === true) {
+      //   // If Description is checked then the Movies are filtered by Description.
+      //   console.log("Genre");
+      //   var filteredMovies = jQuery.grep(cagedMovies, function(e) {
+      //     return e.overview.toLowerCase().indexOf(filter) == 0;
+      //   });
+      //   $( "#result-table").empty();
+      //     console.log(filteredMovies);
+      //     hbTemplate(filteredMovies);
+      //     console.log("Overview");
+      //     event.preventDefault();
+      //     event.preventDefault();
+      //   } else {
+      //   alert("Input Invalid!");
+      //   event.preventDefault();
+      // }
   });
+
+
+      // What now?
+      // How do I filter the cagedMovie array and reload it into the page?
+      // Filter the Array of Objects. Then redraw everything on the screen.
+      // clean Div.
+      // Activate Templating.
+
 
 
 

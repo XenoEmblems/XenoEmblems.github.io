@@ -3,14 +3,17 @@ body {
 	background-color: #3B5998;
 }
 
-/*Responsiveness*/
+/*Responsiveness for mobile site. 
+Only mobile version is visible*/
 
 .parent {
 	margin-top: 100px;
 	width: 100%;
 }
 
-
+.mobile {
+	font-size: 16px;
+}
 
 .desktop {
 	display: none;
@@ -28,7 +31,7 @@ body {
 	display: none;
 }
 
-/*Show mobile version when page is small enough*/
+/*Show Desktop version when page is large enough*/
 
 @media (min-width: 750px) {
 
@@ -92,6 +95,12 @@ body {
 	font-family: 'Lora', serif;
 }
 
+.subheader {
+	font-size:40px;
+	font-weight:700;
+	font-family: 'Lora', serif;
+}
+
 .profilepic {
 	border: 10px solid;
 	border-radius: 5px;
@@ -133,6 +142,27 @@ body {
 
 .portfolio {
 	padding: 3%;
+}
+
+.same-height {
+	max-height: 200px;
+}
+
+/*Modals*/
+
+.modal-content {
+	background-color:#FFFFF0;
+}
+
+.modal-body {
+	font-size: 16px;
+	margin: auto;
+	background-color:#FFFFF0;
+}
+
+.modal-body h2 {
+	font-size: 32px;
+	font-family: 'Lora', serif;
 }
 
 /*Contact Me*/

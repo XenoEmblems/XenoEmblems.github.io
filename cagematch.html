@@ -26,12 +26,12 @@
 	<!-- If no image exists then replace it with a placement image -->
 		<a href="#{{r_id}}" class="movie-link" data-toggle="modal">
 		{{#if image}}
-		<img src="https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cagephoto">
+		<img src="https://image.tmdb.org/t/p/w500{{image}}" class="img-responsive img-rounded cagephoto"></img>
 		{{else}}
-		   <img src="https://www.placecage.com/500/700" class="img-responsive img-rounded cagephoto">
+		   <img src="https://www.placecage.com/500/700" class="img-responsive img-rounded cagephoto"></img>
 		{{/if}}
 		</a>
-	</img>
+	<br>
 	<div class="genres">
 	<p class="align">Genres: </p>
 	 <!-- For loop to show each Genre in the Array. -->
@@ -39,6 +39,7 @@
 	<div class="genre">{{this}}</div>
 	 {{/each}}
 	</div>
+	<br>
 
 	<div class="release-date">
 	<p>Released On: {{release}}</p>
@@ -113,11 +114,13 @@
 <form>
  <div class="form-group">
    <label for="Search">Handlebars App dedicated to my favorite actor.</label>
-   <input type="search" class="form-control" id="search-input" placeholder="Coming Soon">
+   <input type="search" class="form-control" id="search-input" placeholder="Search by Title">
+   <label class="radio-inline"><input id="titleSearch" type="radio" name="optradio">Search by Title</label>
+   <label class="radio-inline"><input id="genreSearch" type="radio" name="optradio">Search by Genre</label>
+   <label class="radio-inline"><input id="descSearch" type="radio" name="optradio">Search by Description</label>
+
  </div>
-  <!-- <label class="radio-inline"><input type="radio" name="optradio">Search by Title</label>
-  <label class="radio-inline"><input type="radio" name="optradio">Search by Genre</label>
-  <label class="radio-inline"><input type="radio" name="optradio">Search by Description</label> -->
+  
   <br> 
  <button id="search-button" type="submit" class="btn btn-default">Submit</button>
 </form>
