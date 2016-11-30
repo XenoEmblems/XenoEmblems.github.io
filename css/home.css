@@ -59,14 +59,14 @@ body {
 /*Different color divs for each section*/
 
 .green {
-	border: 50px solid;
+	border: 25px solid;
 	border-radius: 25px;
 	background-color: #00C957;
 	border-color: green;
 }
 
 .blue {
-	border: 50px solid;
+	border: 25px solid;
 	border-radius: 25px;
 	background-color: #6495ED;
 	border-color: #3162ba;
@@ -76,10 +76,17 @@ body {
 	padding: 5px;
 	background-color: #FFFFF0;
 	border-radius: 5px;
+	max-width: 700px;
+	margin: auto;
 }
 
 .text h2 {
 	margin: 30px;
+}
+
+.box {
+	max-width: 600px;
+	margin: auto;
 }
 
 /*Home*/
@@ -111,6 +118,10 @@ body {
 }
 
 /*Resume*/
+
+.max {
+	width: 100%;
+}
 
 #resume {
 	height: 100%;

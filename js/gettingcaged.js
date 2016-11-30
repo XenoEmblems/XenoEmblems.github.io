@@ -130,7 +130,7 @@ console.log(movieUrl);
 
 
   pageLoop(movieUrl);
-    //For loop for pages
+  //Initiate loop for pages
 
   function pageLoop(apiresponse){
       var cagedMovies = [];
@@ -143,7 +143,7 @@ console.log(movieUrl);
           }
       }); 
   }
-
+// Find the movies in each page and make them into movie objects and push them in the Movie Object Array.
 function getMovies(sourceurl, page) {
     var p = page;
     console.log(sourceurl + "&page=" + page);
@@ -176,6 +176,7 @@ function getMovies(sourceurl, page) {
         if (cagedMovies.length === results){
           console.log(cagedMovies.length);
           console.log(cagedMovies[91]);
+          // Once the movie object array length matches the number of movies then use Handlebars to compile
           hbTemplate(cagedMovies);
         } else {
         console.log(cagedMovies.length);
@@ -184,7 +185,7 @@ function getMovies(sourceurl, page) {
 };
 
 
-
+// Once the 
 function hbTemplate(objects){
   var resultTemplate = $('#result-template').html();
   var compileResults = Handlebars.compile(resultTemplate);
