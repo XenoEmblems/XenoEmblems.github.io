@@ -86,6 +86,7 @@ body {
 
 .box {
 	max-width: 600px;
+	text-align: left;
 	margin: auto;
 }
 
