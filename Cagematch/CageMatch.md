@@ -39,32 +39,6 @@ When calling the movies the Genres are assigned to ids than to their names. So I
     );
   }
 
-Here is a simplified version of my search function using jQuery.grep to filter the array of movie objects that matched the text input.
-More details about everything is in the JS file.
-Using this function I can filter and return an array based a text input.
-$("#search-button").click(function(event){
-      event.preventDefault();
-      var filter = $("#search-input").val();
-      var filteredMovies = jQuery.grep(cagedMovies, function(e) {
-                if (e.title.toLowerCase().includes(filter) === true){
-                return true;
-              } else {
-                var title = e.title.toLowerCase().split(" ");
-                //For loop.
-                  for (j = 0; j < title.length; j++){
-                    // If any the search input is close to this word in the title 
-                    // then return this div.
-                      if(title[j].indexOf(filter) == 0){
-                        return true;
-                        
-                      } else {
-                        // Else nothing happens
-                        console.log("nope");
-                      }
-                    }
-     });
-});
-
 
 ## Additional Libraries
 Bootstrap.js for responsiveness.
