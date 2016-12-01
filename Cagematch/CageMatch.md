@@ -32,13 +32,13 @@ This is a breakdown of the top level functionality for final project
 
 ## Helper Functions
 When calling the movies the Genres are assigned to ids than to their names. So I built an object array which each object has the id and the name of the genre. Then I used a filter function that when the API gives me a genre id I replace it with its name.
-
+```
   function getGenreById(id) {
     return genre.filter(
       function(genre){return genre.id == id;}
     );
   };
-
+```
 
 ## Additional Libraries
 Bootstrap.js for responsiveness.
