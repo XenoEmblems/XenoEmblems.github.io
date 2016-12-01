@@ -70,8 +70,6 @@ $("#search-button").click(function(event){
 Bootstrap.js for responsiveness.
 Handlebars.js for templating.
 
-## jQuery Functional Requirements
- Use this section to list some, but not all, of the jQuery methods discovered while working on this project.
 
 ## Change Log
  11/21/16: First version of the site is uploaded. Movie divs were able to populate in the site.
