@@ -42,10 +42,13 @@ When calling the movies the Genres are assigned to ids than to their names. So I
 
 ## Additional Libraries
 Bootstrap.js for responsiveness.
+
 Handlebars.js for templating.
 
 
 ## Change Log
  11/21/16: First version of the site is uploaded. Movie divs were able to populate in the site.
+ 
  11/29/16: Search functionality is added. If you type in the search bar you can find the movie based on the title.
+ 
  11/30/16: Search Functionality improved. You can search by Title, Genre, and Description. Search is case insensitive.
