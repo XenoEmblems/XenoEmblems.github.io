@@ -199,25 +199,22 @@ function hbTemplate(objects){
 
 // default picture is placecage
 
-
-// Once I get it to load then work on grid wrap columns in row
-// <!-- http://stackoverflow.com/questions/26831128/handlebars-js-and-bootstrap-grid-wrap-columns-in-row -->
-//       <!-- https://funkjedi.com/technology/412-every-nth-item-in-handlebars/ -->
-
-
   // Initiate functions with pageLoop()
   $.when(pageLoop()).done(function(){
     console.log(cagedMovies);
     console.log(cagedMovies.length);
   });
 
+// Search Functionality
   $("#search-button").click(function(event){
       // event.preventDefault();
       console.log("Button was clicked");
+
       // Get Value
       event.preventDefault();
       // Set filter and titles to lowercase so it can have case insensitivity.
       var filter = $("#search-input").val().toLowerCase();
+      console.log(filter);
       console.log(filter);
       // Caged Movies still are an array.
       console.log(cagedMovies);
@@ -238,19 +235,25 @@ function hbTemplate(objects){
               if(titleRadio === true){
               // This is so any part of the title can return True.
               // Seperate Title to an Array of Strings.
-              var title = e.title.toLowerCase().split(" ");
-              //For loop.
-                for (j = 0; j < title.length; j++){
-                  // If any the search input is close to this word in the title 
-                  // then return this div.
-                    if(title[j].indexOf(filter) == 0){
-                      return true;
-                      
-                    } else {
-                      // Else nothing happens
-                      console.log("nope");
+              console.log(e.title.toLowerCase());
+              console.log(filter);
+              if (e.title.toLowerCase().includes(filter) === true){
+                return true;
+              } else {
+                var title = e.title.toLowerCase().split(" ");
+                //For loop.
+                  for (j = 0; j < title.length; j++){
+                    // If any the search input is close to this word in the title 
+                    // then return this div.
+                      if(title[j].indexOf(filter) == 0){
+                        return true;
+                        
+                      } else {
+                        // Else nothing happens
+                        console.log("nope");
+                      }
                     }
-                  }
+                }
                 // If Genre is selected
               } else if (genreRadio === true)  {
                 // Set Genre to a variable
@@ -298,24 +301,8 @@ function hbTemplate(objects){
         
         
       } else {
-        alert("INVALID INPUT");
+        return alert("INVALID INPUT");
       }
-      // } else if (genre === true) {
-      //   // If Description is checked then the Movies are filtered by Description.
-      //   console.log("Genre");
-      //   var filteredMovies = jQuery.grep(cagedMovies, function(e) {
-      //     return e.overview.toLowerCase().indexOf(filter) == 0;
-      //   });
-      //   $( "#result-table").empty();
-      //     console.log(filteredMovies);
-      //     hbTemplate(filteredMovies);
-      //     console.log("Overview");
-      //     event.preventDefault();
-      //     event.preventDefault();
-      //   } else {
-      //   alert("Input Invalid!");
-      //   event.preventDefault();
-      // }
   });
 
 
