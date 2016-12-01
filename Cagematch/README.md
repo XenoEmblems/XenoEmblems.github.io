@@ -1,6 +1,10 @@
 # CageMatch Overview
 
-Nicolas Page search engine using jQuery and Handlebars.
+Nicolas Page search engine using the The Movie DB API calls with Handlebars templating.
+
+Once the movie is found you can learn more about the movie and use http://www.canistream.it/ to see if the movie is available for streaming (Not Owned by me)
+
+http://xenoemblems.github.io/cagematch.html
 
 Angular.js version of the site coming soon.
 
