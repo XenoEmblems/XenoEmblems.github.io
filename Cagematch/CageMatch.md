@@ -37,7 +37,7 @@ When calling the movies the Genres are assigned to ids than to their names. So I
     return genre.filter(
       function(genre){return genre.id == id;}
     );
-  }
+  };
 
 
 ## Additional Libraries
