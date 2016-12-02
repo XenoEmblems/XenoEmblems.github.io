@@ -185,7 +185,7 @@ function getMovies(sourceurl, page) {
 };
 
 
-// Once the 
+// Once the we have the Array of Objects we can start templating.
 function hbTemplate(objects){
   var resultTemplate = $('#result-template').html();
   var compileResults = Handlebars.compile(resultTemplate);
@@ -197,9 +197,7 @@ function hbTemplate(objects){
   };
 
 
-// default picture is placecage
-
-  // Initiate functions with pageLoop()
+  // This is for debugging to make sure that the pageLoop function is complete
   $.when(pageLoop()).done(function(){
     console.log(cagedMovies);
     console.log(cagedMovies.length);
@@ -305,45 +303,5 @@ function hbTemplate(objects){
       }
   });
 
-
-      // What now?
-      // How do I filter the cagedMovie array and reload it into the page?
-      // Filter the Array of Objects. Then redraw everything on the screen.
-      // clean Div.
-      // Activate Templating.
-
-
-
-
-
 });
 
-
-
-
-
-
-
-//Step Two: Handlebars Compile each piece of data into four movie divs.
-// Make them responsive with Bootstrap.
-// Apply Angular to make the Front End Pop.
-
-//Step Three:
-// Develop a modal for each div with more information when clicked on about the movie.
-
-//Step Four:
-// Build a search function that limits the movies based on genre, title,
-// and description text.
-
-//Step Five
-
-//Step Five (Optional):
-// Build Database for Log In and Sign In
-
-// Step Six (Optional):
-
-// Build Rating System that Users can log in and rate movies based on Cheese,
-// Hamminess, Over the Top, and Overall Rating.
-
-// Step Seven (Optional):
-// Improve Search Engine to search by rating
