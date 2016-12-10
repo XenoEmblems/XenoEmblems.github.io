@@ -15,11 +15,17 @@ Only mobile version is visible*/
 	font-size: 16px;
 }
 
+.mobile .container .row {
+	margin-left: 0px;
+    margin-right: 0px;
+}
+
 .desktop {
 	display: none;
 }
 
 .desktop .section {
+	max-width: 900px;
 	height: 500px;
 }
 
@@ -35,8 +41,11 @@ Only mobile version is visible*/
 
 @media (min-width: 750px) {
 
+	body
+
 	.desktop {
 		display: inline-block;
+
 	}
 
 	.mobile {
@@ -50,6 +59,10 @@ Only mobile version is visible*/
 	.social {
 		display: inline;
 	}
+
+	.animatedParent {
+		margin-bottom: 75px;
+	}
 }
 
 
@@ -62,23 +75,23 @@ Only mobile version is visible*/
 /*Different color divs for each section*/
 
 .green {
-	border: 25px solid;
-	border-radius: 25px;
-	background-color: #00C957;
-	border-color: green;
+	/*border: 25px solid;
+	border-radius: 25px;*/
+	background-color: #FFFFF0;
+	/*border-color: green;*/
 }
 
 .blue {
-	border: 25px solid;
-	border-radius: 25px;
-	background-color: #6495ED;
-	border-color: #3162ba;
+	/*border: 25px solid;
+	border-radius: 25px;*/
+	background-color: #FFFFF0;
+	/*border-color: #3162ba;*/
 }
 
 .text {
 	padding: 5px;
 	background-color: #FFFFF0;
-	border-radius: 5px;
+	/*border-radius: 5px;*/
 	max-width: 700px;
 	margin: auto;
 }
@@ -102,9 +115,9 @@ Only mobile version is visible*/
 }
 
 .profilepic {
-	border: 10px solid;
+/*	border: 10px solid;*/
 	border-radius: 5px;
-	border-color: green;
+/*	border-color: green;*/
 
 }
 
@@ -144,6 +157,18 @@ Only mobile version is visible*/
 	padding: 3%;
 }
 
+
+.img-portfolio {
+	max-height: 600px;
+/*	border-style: solid;*/
+/*	border-width: 10px;
+    border-color: #3162ba;*/
+
+}
+.img-thumbnail {
+	max-height: 400px;
+}
+
 .same-height {
 	max-height: 200px;
 }
@@ -163,6 +188,14 @@ Only mobile version is visible*/
 .modal-body h2 {
 	font-size: 32px;
 	font-family: 'Lora', serif;
+}
+
+.textbox {
+/*	border-style: solid;*/
+	background-color: white;
+/*	border-radius: 5px;
+	border-width: 10px;
+    border-color: #3162ba;*/
 }
 
 /*Contact Me*/

@@ -8,4 +8,9 @@ $('a').on('click', function(){
    $("#"+target).show().siblings("div").hide();
    // The selected div is then shown and the other divs then hide
    console.log(target + " selected");
+   // if (target === 'home' || target === 'resume' || target === 'contact'){
+   // 	document.body.style.backgroundColor = "#3B5998";
+   // } else {
+   // 	document.body.style.backgroundColor = "#ffa500";
+   // }
 });
