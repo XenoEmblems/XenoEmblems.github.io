@@ -9,18 +9,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Eric Dyle</title>
+    <title>Eric Doyle</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
 
+    <link href="css/bootstrap_backup.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,7 +34,7 @@
 </head>
 
 <body id="page-top" class="index">
-
+    
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -73,31 +75,31 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <section class="blue">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/backupprofilepicture.png">
-                    
-                    <div class="intro-text">
-                        <span class="name">Eric Doyle</span>
-                        <hr class="star-light">
+                    <div class="col-lg-12">
+                        <img class="img-responsive center" src="img/backupprofilepicture.png">
                         
-                        <span class="skills">Freelance Front End Web Developer</span>
-                        <br>
-                        <span class="skills">Currently a volunteer Front End Developer for Rescuing Leftover Cuisine.</span>
-                        <br>
-                        <a href="http://rescuingleftovercuisine.org"><img class="img-responsive" src="img/rescuinglogo.png" alt=""></img></a>
-                        
+                        <div class="intro-text">
+                            <h1 class="name">Eric Doyle</h1>
+                            <hr class="star-light">
+                            
+                            <span class="skills">Freelance Front End Web Developer</span>
+                            <br>
+                            <span class="skills">Currently a volunteer Front End Developer for Rescuing Leftover Cuisine.</span>
+                            <br>
+                            <a href="http://rescuingleftovercuisine.org"><img class="img-responsive center" src="img/rescuinglogo.png" alt=""></img></a>
+                            
 
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
-    </header>
+    </section>
 
         <!-- About Section -->
-    <section class="success blue" id="about">
+    <section class="success" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -118,7 +120,7 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="success">
+    <section id="portfolio" class="blue">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -126,7 +128,18 @@
                     <hr class="star-light"></hr>
                 </div>
             </div>
+            
             <div class="row portfolo-row">
+                <div class="col-sm-3 portfolio-item">
+                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/CageMatch.png" class="img-responsive same-height" alt="">
+                    </a>
+                </div>
                 <div class="col-sm-3 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -157,6 +170,10 @@
                         <img src="img/portfolio/Skindividuality.png" class="img-responsive same-height" alt="">
                     </a>
                 </div>
+                
+            </div>
+            <div class="row portfolo-row">
+
                 <div class="col-sm-3 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -167,10 +184,8 @@
                         <img src="img/portfolio/Alcove.png" class="img-responsive same-height" alt="">
                     </a>
                 </div>
-            </div>
-            <div class="row portfolo-row">
                 
-                <div class="col-sm-4 portfolio-item">
+                <div class="col-sm-3 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -180,7 +195,7 @@
                         <img src="img/portfolio/row32.png" class="img-responsive same-height" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div class="col-sm-3 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -190,7 +205,7 @@
                         <img src="img/portfolio/trevaughn.png" class="img-responsive same-height" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div class="col-sm-3 portfolio-item">
                     <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -203,7 +218,7 @@
             </div>
         </div>
     </section>
-    <section class="success blue" id="upto">
+    <section class="success" id="upto">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -214,7 +229,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
 
-                        <p>I just finished updating the portfolio website fixing up some glitches and tweaked out the CSS a bit. I'm currently working on updating the Rescuing Leftover Cuisine website and various features. I also am hunting for a new freelance project to work on to build. I would appreciate any leads to my email or to my LinkedIn. I am also researching React.js and planning to use it for a simple app that helps people who are rushing out the door and want to prepare on what to wear.</p>
+                        <p>New Portfolio website is being built to show my updated Front End Development skills.</p>
                         
                     </div>
                 </div>
@@ -231,7 +246,7 @@
                 <div class="row">
                     <div class="footer-col col-md-6">
                         <h3>Location</h3>
-                        <p>525 East 13th Street<br>East Village, NY 10009</p>
+                        <p>63 Western Avenue Morristown, NJ 07960</p>
                     </div>
                     <div class="footer-col col-md-6">
                         <h3>Around the Web</h3>
@@ -500,6 +515,40 @@
                             <br>
                             <div class="row">
                                  <a class="btn btn-default" href="https://www.dunkeyscastle.com/" title="Dunkeys Castle">Website</a>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Cage Match</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/CageMatch.png" class="img-responsive img-centered modal-border" alt="">
+                            <h2>Summary</h2>
+                            <br>
+                            <p>Responsive Web Applications using AJAX to access API pages of Nicolas Cage films from <a href="https://www.themoviedb.org/">The Movie Database</a> and using Handlebars to template the array of movie objects into divs. You can click on the movie data to view its summary and if you can legally stream it and where you can buy it.</p>
+                            <br>
+                            <h3>Skills used:</h3>
+                            <p>HTML/CSS, JavaScript, jQuery, Handlebars, AJAX, Bootstrap</p>
+                            <br>
+                            <div class="row">
+                                <a class="btn btn-default" href="http://xenoemblems.github.io/cagematch.html" title="Cage Match">Website</a>
+                                <a class="btn btn-default" href="https://github.com/XenoEmblems/XenoEmblems.github.io/tree/master/Cagematch" title="Cage Match">Github</a>
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>

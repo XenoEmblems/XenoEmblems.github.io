@@ -1,222 +1,207 @@
 
 body {
-	background-color: #3B5998;
+	background-color: #6495ED;
+  color: #CDEDF6;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+  margin: 0;
+  /*For Navbar*/
+  padding-top: 25px;
+  text-align: center;
 }
+
+/*Background color*/
+/*Cornflower Blue #6495ED*/
+/*2nd Background Color*/
+/* May Green #4CA64C */
+/*Navbar*/
+/*Dark Green #042A2B*/
+
+/*Modals and Link highlights*/
+/*Moonstone Blue #5EB1BF*/
+/*Text*/
+/*Azurish White#CDEDF6*/
+
+
+/*Rename Everything*/
+/*http://getbem.com/naming/ */
+/*block*/
+/*.block__elem*/
+/*block block-mod*/
+
+/*Rebuild CSS Modals using Flexbox*/
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+/*Also use*/
 
 /*Responsiveness for mobile site. 
 Only mobile version is visible*/
 
-.parent {
-	margin-top: 100px;
-	width: 100%;
+
+/*General Elements*/
+.header {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 40px;
+  text-shadow: 2px 2px black;
 }
 
-.mobile {
-	font-size: 16px;
+.header__large {
+  font-size: 50px;
 }
 
-.mobile .container .row {
-	margin-left: 0px;
-    margin-right: 0px;
+.section {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #6495ED;
 }
 
-.desktop {
+.section__green {
+  background-color: #2CA58D;
+}
+
+.button {
+  margin: auto;
+  background-color: #2CA58D;
+  color: #CDEDF6;
+  width: 150px;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  box-shadow: 3px 3px 1px black;
+}
+
+.button a {
+  color: #CDEDF6;
+  text-decoration: none;
+
+}
+
+/*Responsiveness*/
+.hide-small{
 	display: none;
 }
 
-.desktop .section {
-	max-width: 900px;
-	height: 500px;
+/*This is only to force the divs to show on a smaller screen*/
+
+.section__show {
+  display: none;
 }
 
-.page {
-	display: block;
-}
+@media (max-width: 750px) {
 
-.social {
-	display: none;
+  .section__show {
+      display: block!important;
+  }
 }
-
-/*Show Desktop version when page is large enough*/
 
 @media (min-width: 750px) {
 
-	body
+  body {
+    font-size: 15px;
+  }
 
-	.desktop {
-		display: inline-block;
-
+	.hide-small{
+		display: block;
 	}
 
-	.mobile {
-		display: none!important;
-	}
-
-	.page {
-		display: none;
-	}
-
-	.social {
-		display: inline;
-	}
-
-	.animatedParent {
-		margin-bottom: 75px;
-	}
+  
 }
 
 
-/*Center what's inside*/
 
-.container {
-	text-align: center;
+/*Navbar*/
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #042A2B;
+    color: #CDEDF6;
+    margin: 0;
+    overflow: hidden;
+    /*Fixed top*/
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
-/*Different color divs for each section*/
-
-.green {
-	/*border: 25px solid;
-	border-radius: 25px;*/
-	background-color: #FFFFF0;
-	/*border-color: green;*/
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    /* This allow us to arrange list items in a row, without using float */
+    display: inline-block;
+    list-style-type: none;
 }
 
-.blue {
-	/*border: 25px solid;
-	border-radius: 25px;*/
-	background-color: #FFFFF0;
-	/*border-color: #3162ba;*/
+nav a {
+  color: #CDEDF6;
+  display: block;
+  margin: auto;
+  line-height: 2em;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+
 }
 
-.text {
-	padding: 5px;
-	background-color: #FFFFF0;
-	/*border-radius: 5px;*/
-	max-width: 700px;
-	margin: auto;
+nav a:hover {
+  background-color: #5EB1BF;
+  color: #CDEDF6;
 }
 
-.text h2 {
-	margin: 30px;
+nav a:focus {
+  color: #CDEDF6;
+}
+
+nav a:active {
+  font-weight: 700px;
+}
+
+.nav--left {
+  float: left;
+}
+
+.nav--right {
+  float: right;
+}
+
+@media (min-width: 750px) {
+  .nav {
+    width:100%;
+  }
+}
+
+/*Images*/
+.img-responsive {
+  box-shadow: 3px 3px 1px black;
 }
 
 /*Home*/
 
-.header {
-	font-size:50px;
-	font-weight:700;
-	font-family: 'Lora', serif;
-}
-
-.subheader {
-	font-size:40px;
-	font-weight:700;
-	font-family: 'Lora', serif;
-}
-
-.profilepic {
-/*	border: 10px solid;*/
-	border-radius: 5px;
-/*	border-color: green;*/
+.img__home {
+  max-width: 500px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #5EB1BF;
 
 }
 
 /*About Me*/
-.aboutme {
-	padding: 5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-	background-color: #FFFFF0;
-	border-radius: 5px;
-	max-width: 800px;
-	text-align: left;
-	margin: auto;
+
+.img__aboutme {
+  max-width: 800px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #042A2B;
 }
 
-.aboutme p {
-	font-size:20px
-}
+/*Modal*/
 
-/*Resume*/
-
-.max {
-	width: 100%;
-}
-
-#resume {
-	height: 100%;
-}
-#frPDF {
-    padding: 3%;
-    height: 500px;
-}
-
-/*Projects*/
-
-.portfolio {
-	padding: 3%;
-}
-
-
-.img-portfolio {
-	max-height: 600px;
-/*	border-style: solid;*/
-/*	border-width: 10px;
-    border-color: #3162ba;*/
-
-}
-.img-thumbnail {
-	max-height: 400px;
-}
-
-.same-height {
-	max-height: 200px;
-}
-
-/*Modals*/
-
-.modal-content {
-	background-color:#FFFFF0;
-}
-
-.modal-body {
-	font-size: 16px;
-	margin: auto;
-	background-color:#FFFFF0;
-}
-
-.modal-body h2 {
-	font-size: 32px;
-	font-family: 'Lora', serif;
-}
-
-.textbox {
-/*	border-style: solid;*/
-	background-color: white;
-/*	border-radius: 5px;
-	border-width: 10px;
-    border-color: #3162ba;*/
-}
-
-/*Contact Me*/
-
-.no-dots{
-	display:inline-block; 
-	list-style-type: none; 
-	padding-left:0;
-}
-
-.no-dots a{
-	color: #000000;
-}
-
-.no-dots a:hover {
-	color: #18bc9c;
-}
-.contact-link {
-	float: left;
-    padding-left: 25px;
-    padding-right: 25px;
+.modal {
+  display: none;
 }
 
 

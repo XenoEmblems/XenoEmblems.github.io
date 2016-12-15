@@ -1,0 +1,42 @@
+body{
+	color: white;
+	font-family: Montserrat;
+}
+
+.center {
+	margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Lato;
+}
+
+.modal-body .star-primary {
+    background-color: #6495ED;
+    border-color: white;
+}
+
+.modal-body hr.star-primary:after {
+    background-color: #6495ED;
+    border-color: white;
+    color: white;
+}
+
+hr.star-light:after {
+    background-color: #6495ED;
+    color: white;
+}
+
+.blue {
+	background-color: #6495ED;
+}
+
+.modal-content {
+	background-color: #6495ED;
+	text-align: center;
+}
+
+section {
+  text-align: center;
+  padding: 100px 0;
+}

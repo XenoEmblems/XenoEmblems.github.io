@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Custom Frond End Developer website">
+    <meta name="author" content="Eric Doyle">
+
+    <title>Eric Doyle</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat" rel="stylesheet">
+    <!-- Glyphicons -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS3 Animations for divs -->
+    <link href="css/animations.css" rel="stylesheet">
+        <!-- Custom CSS -->
+    <link href="css/home.css" rel="stylesheet">
+
+</head>
+
+<!-- Green Navbar -->
+<!-- Same Green Borders for the containers -->
+<!-- Black Text and White background-->
+<!-- Darker Green for picture borders. -->
+<!-- Contents the same as the previous site. Green Modal. Box is White with Black text. -->
+<!-- Glyphicons for Contact. -->
+<!-- When Mobile Phone size the sections all are shown and alternate colors. -->
+
+<body id="page-top">
+  <header>
+    <nav class="nav">
+      <ul class="nav-list nav--left">
+        <li class="nav-item"><a href="#home" rel="home">Home</a></li>
+        <li class="nav-item"><a href="#about" rel="about">About</a></li>
+        <li class="nav-item"><a href="#resume" rel="resume">Resume</a></li>
+        <li class="nav-item"><a href="#project" rel="projects">Portfolio</a></li>
+        <li class="nav-item"><a href="#contact" rel="contact">Contact</a></li>
+      </ul>
+      <ul class="nav-list nav--right">
+          <li class="nav-item"><a href="http://www.linkedin.com/in/ericxdoyle"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li class="nav-item"><a href="http://www.github.com/XenoEmblems"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+          <li class="nav-item"><a href="http://stackoverflow.com/users/5875155/eric-doyle?tab=profile"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
+          <li class="nav-item"><a href="mailto:ericxdoyle@gmail.com?Subject=I%20looked%20at%20%your%20portfolio!"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--/.nav-collapse -->
+<!-- <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Eric Doyle</a>
+        </div>
+
+
+      </div>
+</nav> -->
+
+<!-- Navbar of views -->
+
+<!-- Desktop -->
+<div class="animatedParent">
+   <div id="home" style="display: block;" class="section animated bounceInUp go">
+      <div class="content">
+            <h1 class="header header__large">Eric Doyle</h1>
+            <h1 class="header">Front End Web Developer</h1>
+            <img src="img/backupprofilepicture.png" class="img-responsive img__home"/>
+            <br>
+            <br>
+            <div class="button animated fadeIn"><a href="#project" rel="projects">View Portfolio</a></div>
+            
+             <!--  <h3>Website still in progress.</h3> -->
+            <br>
+      </div>
+   </div>
+
+   <!-- Home/About Me View -->
+    <!-- Profile Picture - Elevator Pitch to sell myself -->
+    <!-- Be friendly and personal. -->
+    <!-- No longer than 300 words -->
+    <div id="about" class="section section__green section__show animated bounceInUp go">
+      <div class="content">
+        <h1 class="header">About Me</h1>
+        <br>
+        <div class="aboutme">
+          <img class="img-responsive img__aboutme" src="img/profilepicture.jpg"/>
+            <div class="box">
+                <br>
+                <p>I am a Front End Web Developer who specializes in responsive websites and applications.</p> 
+                <p>Once I graduated with my Bachelor's in Economics at Drew University in 2014 I decided to pursue a career in programming. I self-taught myself HTML/CSS and building web pages for Search Engine Optimization at New Web Design and then learned JavaScript, Ruby, and Front End Development at General Assembly.
+                </p>
+                <p>I'm enthusiastic and excited by taking on challenges and taking on new challenges to improve my skills. I love working with other people and I am analytical when it comes to doing my work.</p>
+                <!-- When I'm not coding I love watching Nicolas Cage, Sly Stallone movies and laughing at B-movies. -->
+                <br>
+                <p>I'm currently looking for full time and contract opportunities where I can learn and grow with the company. I appreciate anyone that wants to get to know me and I'm available to contact when you are available.</p>
+            </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div id="resume" class="section section__show animated bounceInUp go">
+      <div class="content">
+            <br>
+            <h1 class="header">Resume</h1>
+
+            <div class="text">
+            <h2><a href="ProgramResumeNY.pdf">Download Resume Here!</a></h2>
+            </div>
+            <br>
+      </div>
+   </div>
+   <div id="projects" class="section section__green section__show animated bounceInUp go">
+      <div class="col-sm-12">
+        <h1 class="header" style="padding-bottom: 20px;">Portfolio</h1>
+      </div>
+      <br>
+      <br>
+      <div class="row portfolio">
+        <div class="col-sm-4 item">
+          <a href="#modal1" data-toggle="modal">
+            <img src="http://www.placecage.com/c/400/400" class="img-responsive same-height" alt="">
+          </a>
+        </div>
+        <div class="col-sm-4 item">
+          <a href="#modal2" data-toggle="modal">
+            <img src="img/portfolio/portfoliosite.png" class="img-responsive same-height" alt="">
+          </a>
+        </div>
+        <div class="col-sm-4 portfolio-item">
+          <a href="#modal3" data-toggle="modal">
+            <img src="img/portfolio/DunkeysCastle.png" class="img-responsive same-height" alt="">
+          </a>
+        </div>
+      </div>
+      <br>
+      <div class="row portfolio">
+        <div class="col-sm-4 item">
+          <a href="#modal4" data-toggle="modal">
+            <img src="img/portfolio/SafariZone.png" class="img-responsive same-height" alt="">
+          </a>
+        </div>
+        <div class="col-sm-4 item">
+          <a href="#modal5" data-toggle="modal">
+            <img src="img/portfolio/RoseResume.png" class="img-responsive same-height" alt="">
+          </a>
+        </div>
+        <div class="col-sm-4 item">
+          <a href="#modal6" data-toggle="modal">
+            <img src="img/portfolio/trevaughn.png" class="img-responsive same-height" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="contact" class="section section__show animated bounceInUp go">
+    <div class="row green">
+      <br>
+        <div class="col-sm-12">
+          <h1 class="header">Contact</h1>
+            <br>
+              <div class="text">
+                <br>
+                <div class="box">
+                  <h2>I'll be available at your earliest convenience when you email me about a potential opportunity or for networking!</h2>
+                </div>
+                <br>
+                  <ul class="no-dots">
+                    <li class="contact-link"><a href="http://www.linkedin.com/in/ericxdoyle"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a></li>
+                    <li class="contact-link"><a href="http://www.github.com/XenoEmblems"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a></li>
+                    <li class="contact-link"><a href="http://stackoverflow.com/users/5875155/eric-doyle?tab=profile"><i class="fa fa-stack-overflow fa-3x" aria-hidden="true"></i></a></li>
+                    <li class="contact-link"><a href="mailto:ericxdoyle@gmail.com?Subject=I%20looked%20at%20%your%20portfolio!"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a></li>
+                  </ul>
+              </div>
+            <br>
+        </div>
+      <br>
+    </div>
+  </div>
+
+<!-- Parent end -->
+</div>
+
+
+<!-- Modals -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="modal-body">
+        <!-- Close Modal Button -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          
+            <h2>Getting Caged</h2>
+        <!-- Special Line for under the title -->
+            <hr>
+            <img src="img/portfolio/CageMatch.png" class="img-portfolio img-responsive img-rounded center-block">
+            <br>
+          <div class="textbox">
+            <h3>Summary</h3>
+            <p>Responsive Web Applications using AJAX to access API pages of Nicolas Cage films from The Movie Database and using Handlebars to template the array of movie objects into divs. You can click on the movie data to view its summary and if you can legally stream it and where you can buy it.</p>
+            <h3>Skills used:</h3>
+            <p>HTML/CSS, JavaScript, jQuery, Handlebars, AJAX, Bootstrap</p>
+          </div>
+          <div class="row">
+          <!-- Button to find legal streaming. Find Legal streaming search website.-->
+          <a target="_blank" class="btn btn-default link" href="http://xenoemblems.github.io/cagematch.html">View Project</a>
+          <!-- If Netflix Fa exists or Tv exists put it here -->
+          <!-- Find movie on Amazon when clicked. Put Amazon or Dollar Glyph here if it exists-->
+          <a target="_blank" class="btn btn-default link" href="http://www.github.com/xenoemblems">View Github</a>
+          <button type="button" class="btn btn-default link" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="modal-body">
+        <!-- Close Modal Button -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2>Portfolio Website</h2>
+        <!-- Special Line for under the title -->
+            <hr>
+            <img src="img/portfolio/portfoliosite.png" class="img-portfolio img-responsive img-rounded center-block">
+            <h3>Summary</h3>
+            <p>I wanted to build a one page website that didn't need to scroll unless viewed on a mobile device. This is a responsive Twitter Bootstrap website from scratch using jQuery to display a section of the site when clicked on the navbar. When the site is small enough then all sections of the website are shown and optimized for mobile devices.</p>
+            <h3>Skills used</h3>
+            <p>HTML/CSS, JavaScript, jQuery, Angular.js, AJAX, Bootstrap</p>
+          <div class="row">
+          <!-- Button to find legal streaming. Find Legal streaming search website.-->
+          <a class="btn btn-default link" href="http://www.xenoemblems.github.io">You're here now.</a>
+          <!-- If Netflix Fa exists or Tv exists put it here -->
+          <!-- Find movie on Amazon when clicked. Put Amazon or Dollar Glyph here if it exists-->
+          <a target="_blank" class="btn btn-default link" href="#">View Github</a>
+          <button type="button" class="btn btn-default link" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="modal-body">
+        <!-- Close Modal Button -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2>Dunkey's Castle</h2>
+            <img src="img/portfolio/DunkeysCastle.png" class="img-portfolio img-responsive img-rounded center-block" alt="">
+            <h2>Summary</h2>
+            <br>
+            <p>Online store website developed from scratch for famed Youtube celebrity <a href="https://www.youtube.com/user/videogamedunkey">VideoGameDunkey</a> using HTML5/CSS and Bootstrap.</p>
+            <br>
+            <p>The main website was debugged and optimized for speed and responsiveness. The website is set up with modals for various merchandise. A seperate mobile site was developed for tablets and mobile devices.</p>
+            <br>
+            <p>Being able to get in contact with him by cold calling him shows that I can take initiative even when it seems unlikely it will happen. I had a wonderful time building this.</p> 
+            <h3>Skills Used:</h3>
+            <p>HTML5/CSS3, HTML5 Canvas, Bootstrap, JavaScript</p>
+            <div class="row">
+                <a class="btn btn-default" href="https://www.dunkeyscastle.com/" title="Dunkeys Castle">Website</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="modal-body">
+        <!-- Close Modal Button -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2>Safari Zone</h2>
+            <img src="img/portfolio/DunkeysCastle.png" class="img-portfolio img-responsive img-rounded center-block" alt="">
+
+            <h2>Summary</h2>
+            <br>
+            <p>A full stack Ruby on Rails application that is built as the final project of the General Assembly Web Development Immersive Course. The app is supposed to recreate the Pokemon Safari Zone minigame in the mainstream Pokemon Games. When an account is created then Pokemon are rendered on the front page then you can capture and learn about the Pokemon you find.</p>
+            <br>
+            <p>The database was filled using <a href="http://www.pokeapi.co/">Pokéapi</a> which is a free Pokemon API. In V1 the missing catchrate in the database was inserted using JSON. Currently the API updated to V2 and now has the correct catchrates.</p>
+            <br>
+            <div class="row">
+                <a class="btn btn-default" href="http://goomy-safari.herokuapp.com/" title="Dunkeys Castle">Website</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="modal-body">
+        <!-- Close Modal Button -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2>Safari Zone</h2>
+            <img src="img/portfolio/DunkeysCastle.png" class="img-portfolio img-responsive img-rounded center-block" alt="">
+
+            <h2>Summary</h2>
+            <br>
+            <p>A full stack Ruby on Rails application that is built as the final project of the General Assembly Web Development Immersive Course. The app is supposed to recreate the Pokemon Safari Zone minigame in the mainstream Pokemon Games. When an account is created then Pokemon are rendered on the front page then you can capture and learn about the Pokemon you find.</p>
+            <br>
+            <p>The database was filled using <a href="http://www.pokeapi.co/">Pokéapi</a> which is a free Pokemon API. In V1 the missing catchrate in the database was inserted using JSON. Currently the API updated to V2 and now has the correct catchrates.</p>
+            <br>
+            <p>Application is not up to date with Pokemon Sun/Moon.</p>
+            <div class="row">
+                <a class="btn btn-default" href="http://goomy-safari.herokuapp.com/" title="Safari Zone">Website</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="modal-body">
+        <!-- Close Modal Button -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2>Safari Zone</h2>
+            <img src="img/portfolio/DunkeysCastle.png" class="img-portfolio img-responsive img-rounded center-block" alt="">
+
+            <h2>Summary</h2>
+            <br>
+            <p>A full stack Ruby on Rails application that is built as the final project of the General Assembly Web Development Immersive Course. The app is supposed to recreate the Pokemon Safari Zone minigame in the mainstream Pokemon Games. When an account is created then Pokemon are rendered on the front page then you can capture and learn about the Pokemon you find.</p>
+            <br>
+            <p>The database was filled using <a href="http://www.pokeapi.co/">Pokéapi</a> which is a free Pokemon API. In V1 the missing catchrate in the database was inserted using JSON. Currently the API updated to V2 and now has the correct catchrates.</p>
+            <br>
+            <p>Application is not up to date with Pokemon Sun/Moon.</p>
+            <div class="row">
+                <a class="btn btn-default" href="http://goomy-safari.herokuapp.com/" title="Safari Zone">Website</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="modal-body"> -->
+        <!-- Close Modal Button -->
+<!--           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2>Very Sly</h2> -->
+        <!-- Special Line for under the title -->
+           <!--  <hr>
+            <img src="http://www.placecage.com/400/400" class="img-responsive img-rounded center-block">
+            <h3>Summary</h3>
+            <p>Angular.js Version of Getting Caged</p>
+            <br>
+            <p>Responsive Web Applications using AJAX to access API pages of Sylvester Stallone films from The Movie Database and using Angular.js to template the array of movie objects into divs. The search bar is also binded to filter any movie that was found. You can click on the movie data to view its summary and if you can legally stream it and where you can buy it.</p>
+            <h3>Skills used</h3>
+            <p>HTML/CSS, JavaScript, jQuery, Angular.js, AJAX, Bootstrap</p>
+          <div class="row"> -->
+          <!-- Button to find legal streaming. Find Legal streaming search website.-->
+<!--           <a target="_blank" class="btn btn-default link" href="http://www.xenoemblems.github.io/cagematch.html">View Project</a> -->
+          <!-- If Netflix Fa exists or Tv exists put it here -->
+          <!-- Find movie on Amazon when clicked. Put Amazon or Dollar Glyph here if it exists-->
+<!--           <a target="_blank" class="btn btn-default link" href="http://www.github.com/xenoemblems">View Github</a>
+          <button type="button" class="btn btn-default link" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- Display a list of major ventures I worked in on left.
+New Web Design, Rescuing Leftover Cuisine, Seedless Lawyers
+
+Skills showcased on the right.
+
+Resume.pdf so people can print it out.
+-->
+
+<!--  Portfolio View
+
+Display a list of projects and what I've learned for each project I have done.
+Ask Claudia on how I should present this. Showcase Website and GettingCaged project.
+
+Start with 3x2 display to share with Getting Caged
+
+Modal with picture and link on the left.
+
+Github Info, Functionality, Tech Stack on right
+
+ -->
+ <!-- Contact View 
+
+Hire me
+Phone Number,
+Skype,
+LinkedIn link,
+Email link
+
+
+ -->
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+<!--     <script src="js/bootstrap.min.js"></script> -->
+
+    <!-- Animation JS -->
+    <script src="js/css3-animate-it.js"></script>
+
+    <!-- Custom JS where the magic happens -->
+    <script src="js/home.js"></script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+
+body {
+	background-color: #3B5998;
+}
+
+/*Rebuild CSS using Flexbox*/
+/*Also use*/
+
+/*Responsiveness for mobile site. 
+Only mobile version is visible*/
+
+.parent {
+	margin-top: 100px;
+	width: 100%;
+}
+
+.mobile {
+	font-size: 16px;
+}
+
+.mobile .container .row {
+	margin-left: 0px;
+    margin-right: 0px;
+}
+
+.desktop {
+	display: none;
+}
+
+.desktop .section {
+	max-width: 900px;
+	height: 500px;
+}
+
+.page {
+	display: block;
+}
+
+.social {
+	display: none;
+}
+
+/*Show Desktop version when page is large enough*/
+
+@media (min-width: 750px) {
+
+	body
+
+	.desktop {
+		display: inline-block;
+
+	}
+
+	.mobile {
+		display: none!important;
+	}
+
+	.page {
+		display: none;
+	}
+
+	.social {
+		display: inline;
+	}
+
+	.animatedParent {
+		margin-bottom: 75px;
+	}
+}
+
+
+/*Center what's inside*/
+
+.container {
+	text-align: center;
+}
+
+/*Different color divs for each section*/
+
+.green {
+	/*border: 25px solid;
+	border-radius: 25px;*/
+	background-color: #FFFFF0;
+	/*border-color: green;*/
+}
+
+.blue {
+	/*border: 25px solid;
+	border-radius: 25px;*/
+	background-color: #FFFFF0;
+	/*border-color: #3162ba;*/
+}
+
+.text {
+	padding: 5px;
+	background-color: #FFFFF0;
+	/*border-radius: 5px;*/
+	max-width: 700px;
+	margin: auto;
+}
+
+.text h2 {
+	margin: 30px;
+}
+
+/*Home*/
+
+.header {
+	font-size:50px;
+	font-weight:700;
+	font-family: 'Lora', serif;
+}
+
+.subheader {
+	font-size:40px;
+	font-weight:700;
+	font-family: 'Lora', serif;
+}
+
+.profilepic {
+/*	border: 10px solid;*/
+	border-radius: 5px;
+/*	border-color: green;*/
+
+}
+
+/*About Me*/
+.aboutme {
+	padding: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	background-color: #FFFFF0;
+	border-radius: 5px;
+	max-width: 800px;
+	text-align: left;
+	margin: auto;
+}
+
+.aboutme p {
+	font-size:20px
+}
+
+/*Resume*/
+
+.max {
+	width: 100%;
+}
+
+#resume {
+	height: 100%;
+}
+#frPDF {
+    padding: 3%;
+    height: 500px;
+}
+
+/*Projects*/
+
+.portfolio {
+	padding: 3%;
+}
+
+
+.img-portfolio {
+	max-height: 600px;
+/*	border-style: solid;*/
+/*	border-width: 10px;
+    border-color: #3162ba;*/
+
+}
+.img-thumbnail {
+	max-height: 400px;
+}
+
+.same-height {
+	max-height: 200px;
+}
+
+/*Modals*/
+/*Rebuild modals using*/
+/*http://www.w3schools.com/howto/howto_css_modals.asp*/
+
+.modal-content {
+	background-color:#FFFFF0;
+}
+
+.modal-body {
+	font-size: 16px;
+	margin: auto;
+	background-color:#FFFFF0;
+}
+
+.modal-body h2 {
+	font-size: 32px;
+	font-family: 'Lora', serif;
+}
+
+.textbox {
+/*	border-style: solid;*/
+	background-color: white;
+/*	border-radius: 5px;
+	border-width: 10px;
+    border-color: #3162ba;*/
+}
+
+/*Contact Me*/
+
+.no-dots{
+	display:inline-block; 
+	list-style-type: none; 
+	padding-left:0;
+}
+
+.no-dots a{
+	color: #000000;
+}
+
+.no-dots a:hover {
+	color: #18bc9c;
+}
+.contact-link {
+	float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
